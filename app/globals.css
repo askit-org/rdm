@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8f9f6;
-  --foreground: #1c211e;
+  --background: #042c1e;
+  --foreground: #fbfcf9;
   
-  --primary: #083827;
-  --primary-light: #12573f;
-  --gold: #d4af37;
-  --gold-dark: #b89326;
+  --primary: #042c1e;
+  --primary-light: #0a3d2b;
+  --gold: #caa23f;
+  --gold-dark: #b28e35;
   --cream: #fbfcf9;
-  --charcoal: #272a28;
+  --charcoal: #101713;
 }
 
 @theme {
@@ -27,6 +27,7 @@
   --animate-float: float 6s ease-in-out infinite;
   --animate-fade-in: fadeIn 1s ease-out forwards;
   --animate-slide-up: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-shimmer: shimmer 2.5s infinite;
 }
 
 @keyframes float {
@@ -42,6 +43,11 @@
 @keyframes slideUp {
   from { transform: translateY(20px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }
 
 html {
@@ -61,10 +67,10 @@ body {
     opacity: 0;
   }
   10% {
-    opacity: 0.6;
+    opacity: var(--leaf-opacity, 0.03);
   }
   90% {
-    opacity: 0.6;
+    opacity: var(--leaf-opacity, 0.03);
   }
   100% {
     transform: translateY(110vh) translateX(150px) rotate(360deg);
@@ -78,10 +84,10 @@ body {
     opacity: 0;
   }
   15% {
-    opacity: 0.5;
+    opacity: var(--leaf-opacity, 0.025);
   }
   85% {
-    opacity: 0.5;
+    opacity: var(--leaf-opacity, 0.025);
   }
   100% {
     transform: translateY(110vh) translateX(-150px) rotate(-360deg);
@@ -95,10 +101,10 @@ body {
     opacity: 0;
   }
   20% {
-    opacity: 0.4;
+    opacity: var(--leaf-opacity, 0.02);
   }
   80% {
-    opacity: 0.4;
+    opacity: var(--leaf-opacity, 0.02);
   }
   100% {
     transform: translateY(110vh) translateX(80px) rotate(180deg);

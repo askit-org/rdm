@@ -28,7 +28,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col relative bg-gradient-to-br from-[#fbfcf9] via-[#f1f5f0] to-[#e6ede4] text-charcoal">
+      <body className="min-h-full flex flex-col relative bg-primary text-cream">
         <FlowingLeaves />
         {children}
       </body>

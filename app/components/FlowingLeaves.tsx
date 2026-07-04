@@ -33,22 +33,22 @@ export default function FlowingLeaves() {
   return (
     <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
       {leaves.map((leaf) => (
-        <svg
+        <span
           key={leaf.id}
-          className={`absolute text-[#12573f]/12 ${leaf.animationClass}`}
-          style={{
-            left: leaf.left,
-            animationDelay: leaf.delay,
-            width: leaf.size,
-            height: leaf.size,
-            top: "-5%",
-          }}
-          viewBox="0 0 24 24"
-          fill="currentColor"
+          className={`absolute select-none pointer-events-none ${leaf.animationClass}`}
+          style={
+            {
+              left: leaf.left,
+              animationDelay: leaf.delay,
+              fontSize: `${leaf.size / 3.5}px`,
+              top: "-5%",
+              opacity: 0.015,
+              "--leaf-opacity": 0.1,
+            } as React.CSSProperties
+          }
         >
-          {/* Detailed organic leaf path */}
-          <path d="M17 2.001C15.5 2 12.5 3 10.5 5.5c-2.3 2.7-3 6.5-3 8.5 0 2.5 1.5 4 3.5 4s5.5-2.5 6.5-6.5c1-4-.5-8.5-1-9.5zM11 16.501c-1.1 0-1.8-.7-1.8-1.5 0-1.2.6-4.1 2.3-6.1.6-.7 1.3-1.3 1.9-1.7-.2 1.3-.9 3.9-2.2 5.8-.8 1.2-1.3 2.5-1.3 3.5z" />
-        </svg>
+          🌿
+        </span>
       ))}
     </div>
   );
