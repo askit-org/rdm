@@ -281,7 +281,7 @@ export default function LandingPage() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.15, ease: "easeOut" }}
-            className="md:hidden bg-blue-950/95 backdrop-blur-xl text-cream border-t border-blue-500/20 px-6 py-4"
+            className="md:hidden bg-[#032217]/95 backdrop-blur-xl text-cream border-t border-gold/20 px-6 py-4"
           >
             <nav className="flex flex-col gap-4">
               <a
