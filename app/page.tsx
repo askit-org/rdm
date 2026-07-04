@@ -124,6 +124,32 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen text-cream font-sans selection:bg-gold selection:text-primary scroll-smooth relative overflow-x-hidden">
+      {/* JSON-LD Schema Markup for Google SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "name": "RDM Pure Organic Moringa Powder",
+            "image": ["https://rdmmoringa.co.in/product-jar.jpg"],
+            "description": "Premium FSSAI certified Ayurvedic supplement made of 100% pure organic Moringa Oleifera leaves. Boosts energy, immunity, and skin wellness naturally.",
+            "brand": {
+              "@type": "Brand",
+              "name": "RDM"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "INR",
+              "price": "160",
+              "itemCondition": "https://schema.org/NewCondition",
+              "availability": "https://schema.org/InStock",
+              "url": "https://amzn.in/d/03Mnwvgr"
+            }
+          })
+        }}
+      />
+
       {/* Sticky Header */}
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -137,8 +163,9 @@ export default function LandingPage() {
             <div className="relative w-10 h-10 rounded-full overflow-hidden border border-gold/30 group-hover:border-gold transition-colors">
               <Image
                 src="/logo.jpg"
-                alt="RDM Logo"
+                alt="RDM Moringa Logo"
                 fill
+                sizes="40px"
                 className="object-cover"
                 priority
               />
@@ -414,8 +441,9 @@ export default function LandingPage() {
             <div className="relative w-full max-w-[360px] aspect-[4/5] rounded-[24px] overflow-hidden shadow-2xl border-2 border-gold/40 bg-primary-light group animate-float">
               <Image
                 src="/product-jar.jpg"
-                alt="RDM Moringa Powder Jar on Table"
+                alt="RDM Pure Organic Moringa Powder Jar"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 360px"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 priority
               />
@@ -567,10 +595,11 @@ export default function LandingPage() {
                   }
                   alt={
                     activeTab === "wellness"
-                      ? "Wellness Benefits Infographic"
-                      : "Vitamins Benefits Infographic"
+                      ? "Pure Organic Moringa Powder Wellness Benefits Infographic"
+                      : "Moringa Oleifera Powder Vitamins and Advanced Care Infographic"
                   }
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 360px"
                   className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
                 />
 
@@ -851,8 +880,9 @@ export default function LandingPage() {
               <div className="absolute -right-16 -bottom-16 w-60 h-60 opacity-[0.03]">
                 <Image
                   src="/logo.jpg"
-                  alt="Watermark"
+                  alt="RDM Moringa Watermark Logo"
                   fill
+                  sizes="240px"
                   className="object-cover rounded-full"
                 />
               </div>
@@ -861,8 +891,9 @@ export default function LandingPage() {
                 <div className="w-12 h-12 rounded-full overflow-hidden border border-gold/50 relative">
                   <Image
                     src="/logo.jpg"
-                    alt="Logo"
+                    alt="RDM Moringa Logo Symbol"
                     fill
+                    sizes="48px"
                     className="object-cover"
                   />
                 </div>
@@ -942,8 +973,9 @@ export default function LandingPage() {
               <div className="relative w-12 h-12 rounded-full overflow-hidden border border-gold/30">
                 <Image
                   src="/logo.jpg"
-                  alt="RDM Logo"
+                  alt="RDM Enterprises Moringa Logo"
                   fill
+                  sizes="48px"
                   className="object-cover"
                 />
               </div>
@@ -1072,8 +1104,9 @@ export default function LandingPage() {
           <div className="relative w-full max-w-[500px] aspect-[2/3] rounded-xl overflow-hidden shadow-2xl border border-gold/30">
             <Image
               src={isZoomed}
-              alt="Zoomed Infographic"
+              alt="Zoomed RDM Moringa Powder Benefits Infographic Detail"
               fill
+              sizes="(max-width: 768px) 100vw, 500px"
               className="object-contain bg-white"
             />
             <button

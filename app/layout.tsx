@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "RDM Moringa Powder | 100% Pure Natural Superfood Supplement",
-  description: "RDM Moringa Powder is a premium, FSSAI certified Ayurvedic supplement made of 100% pure organic Moringa Oleifera leaves. Boost energy, immunity, and skin wellness naturally.",
+  title: "RDM Moringa | Best Organic Moringa Powder in India",
+  description: "Looking for the best moringa in India? RDM Moringa Powder is a premium, FSSAI certified Ayurvedic supplement made of 100% pure organic Moringa Oleifera leaves. Boost energy, immunity, and skin wellness naturally.",
 };
 
 export default function RootLayout({
